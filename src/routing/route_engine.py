@@ -39,7 +39,13 @@ def route_between_places(
         destination_node
     )
 
-    return path, distance
+    return (
+    graph,
+    path,
+    distance,
+    source_node,
+    destination_node
+)
 
 
 if __name__ == "__main__":
@@ -52,9 +58,11 @@ if __name__ == "__main__":
         "Madurai Junction Railway Station"
     )
 
-    path, distance = route_between_places(
-        source,
-        destination
+    graph, path, distance, source_node, destination_node = (
+        route_between_places(
+            source,
+            destination
+        )
     )
 
     print("\nREAL ROUTE RESULT")

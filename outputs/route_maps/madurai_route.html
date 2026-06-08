@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4fda93bf01128e95fa719482f44f3785 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4fda93bf01128e95fa719482f44f3785" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4fda93bf01128e95fa719482f44f3785 = L.map(
+                "map_4fda93bf01128e95fa719482f44f3785",
+                {
+                    center: [9.9191585, 78.1170928],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d80b96b650c6a19f46c7f8199d7b2051 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d80b96b650c6a19f46c7f8199d7b2051.addTo(map_4fda93bf01128e95fa719482f44f3785);
+        
+    
+            var marker_04dd85827386c170aa400fc8fd4c59bc = L.marker(
+                [9.9191585, 78.1170928],
+                {
+}
+            ).addTo(map_4fda93bf01128e95fa719482f44f3785);
+        
+    
+        var popup_dbe8d17411f3146c033f7afad2aa36d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09273dbf59d18b5466532560769547b6 = $(`<div id="html_09273dbf59d18b5466532560769547b6" style="width: 100.0%; height: 100.0%;">Meenakshi Amman Temple, Madurai</div>`)[0];
+                popup_dbe8d17411f3146c033f7afad2aa36d6.setContent(html_09273dbf59d18b5466532560769547b6);
+            
+        
+
+        marker_04dd85827386c170aa400fc8fd4c59bc.bindPopup(popup_dbe8d17411f3146c033f7afad2aa36d6)
+        ;
+
+        
+    
+    
+            marker_04dd85827386c170aa400fc8fd4c59bc.bindTooltip(
+                `<div>
+                     Source
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d07cd18e3fce70cabc9577b4d0e6d948 = L.marker(
+                [9.9192496, 78.1081491],
+                {
+}
+            ).addTo(map_4fda93bf01128e95fa719482f44f3785);
+        
+    
+        var popup_a759d29150dbde9809a1ebac85a9e254 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e6707033153e7ff6ac995d6b6cff9ee = $(`<div id="html_8e6707033153e7ff6ac995d6b6cff9ee" style="width: 100.0%; height: 100.0%;">Madurai Junction Railway Station</div>`)[0];
+                popup_a759d29150dbde9809a1ebac85a9e254.setContent(html_8e6707033153e7ff6ac995d6b6cff9ee);
+            
+        
+
+        marker_d07cd18e3fce70cabc9577b4d0e6d948.bindPopup(popup_a759d29150dbde9809a1ebac85a9e254)
+        ;
+
+        
+    
+    
+            marker_d07cd18e3fce70cabc9577b4d0e6d948.bindTooltip(
+                `<div>
+                     Destination
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3dfc6efb25818cf972c4368606bfb657 = L.polyline(
+                [[9.9191585, 78.1170928], [9.917669, 78.1172551], [9.9175899, 78.1167404], [9.9175327, 78.1165347], [9.9174645, 78.1162898], [9.9173268, 78.1157946], [9.9172334, 78.1155542], [9.9170587, 78.1150872], [9.9169934, 78.114863], [9.9169655, 78.114791], [9.9168769, 78.1145376], [9.9167735, 78.1142148], [9.9167106, 78.1139694], [9.9166432, 78.1136222], [9.9165209, 78.1126585], [9.916215, 78.1126516], [9.9153675, 78.1126036], [9.91509, 78.1125899], [9.9149231, 78.1115785], [9.9150074, 78.111582], [9.9162259, 78.1104159], [9.916956, 78.1088975], [9.9171476, 78.10882], [9.9192496, 78.1081491]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_4fda93bf01128e95fa719482f44f3785);
+        
+</script>
+</html>
