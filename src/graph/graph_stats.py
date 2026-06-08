@@ -1,4 +1,4 @@
-from graph_loader import download_city_graph
+from src.graph.graph_loader import download_city_graph
 
 city = "Madurai, Tamil Nadu, India"
 

@@ -1,4 +1,4 @@
-from graph_loader import download_city_graph
+from src.graph.graph_loader import download_city_graph
 
 
 def build_adjacency_list(graph):
