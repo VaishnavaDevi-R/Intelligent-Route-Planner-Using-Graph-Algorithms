@@ -37,19 +37,30 @@ def create_route_map(
     folium.Marker(
         location=route_coordinates[0],
         popup=source_name,
-        tooltip="Source"
+        tooltip="Source",
+        icon=folium.Icon(
+            color="green",
+            icon="play"
+        )
     ).add_to(route_map)
 
     folium.Marker(
         location=route_coordinates[-1],
         popup=destination_name,
-        tooltip="Destination"
+        tooltip="Destination",
+        icon=folium.Icon(
+            color="red",
+            icon="stop"
+        )
     ).add_to(route_map)
 
     folium.PolyLine(
         route_coordinates,
-        weight=5,
-        opacity=0.8
+        weight=6,
+        color="blue",
+        opacity=0.9,
+        popup=
+            f"{source_name} → {destination_name}"
     ).add_to(route_map)
 
     route_map.save(output_file)

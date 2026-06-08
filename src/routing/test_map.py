@@ -12,7 +12,7 @@ if __name__ == "__main__":
         "Madurai Junction Railway Station"
     )
 
-    graph, path, distance, source_node, destination_node = (
+    graph, path, distance, eta, traffic_eta, fuel_cost, source_node, destination_node = (
         route_between_places(
             source,
             destination
@@ -28,4 +28,15 @@ if __name__ == "__main__":
 
     print(
         f"\nDistance: {distance/1000:.2f} km"
+    )
+
+    print(f"ETA: {eta:.2f} minutes")
+
+    print(
+        f"Traffic ETA: "
+        f"{traffic_eta:.2f} minutes"
+    )
+
+    print(
+        f"Fuel Cost: ₹{fuel_cost}"
     )

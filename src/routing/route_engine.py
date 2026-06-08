@@ -2,6 +2,9 @@ from src.graph.graph_loader import download_city_graph
 from src.utils.geocoder import get_coordinates
 from src.utils.node_finder import find_nearest_node
 from src.algorithms.astar import astar
+from src.analytics.metrics import calculate_eta
+from src.analytics.fuel_estimator import calculate_fuel_cost
+from src.traffic.traffic_engine import apply_traffic
 
 
 def route_between_places(
@@ -39,10 +42,24 @@ def route_between_places(
         destination_node
     )
 
+    eta = calculate_eta(distance)
+
+    traffic_eta = apply_traffic(
+        eta,
+        "medium"
+    )
+
+    fuel_cost = calculate_fuel_cost(
+        distance
+    )
+
     return (
     graph,
     path,
     distance,
+    eta,
+    traffic_eta,
+    fuel_cost,
     source_node,
     destination_node
 )
