@@ -6,48 +6,20 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
 ![React](https://img.shields.io/badge/React-Frontend-61DAFB)
 ![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial-orange)
+![Graph Algorithms](https://img.shields.io/badge/Algorithms-Dijkstra%20%7C%20A*%20%7C%20BFS%20%7C%20DFS%20%7C%20Yen's-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-### Real-Time Route Optimization and Navigation System Using Graph Algorithms
+### Real-Time Route Optimization and Navigation System Using Graph Algorithms, FastAPI, React and OpenStreetMap
 
 </div>
 
 ---
 
-## 🌐 Live Demo
-
-### Frontend
-
-```text
-https://YOUR-VERCEL-URL.vercel.app
-```
-
-### Backend API
-
-```text
-https://YOUR-RENDER-URL.onrender.com
-```
-
-### Swagger Documentation
-
-```text
-https://YOUR-RENDER-URL.onrender.com/docs
-```
-
----
-
 ## 📌 Overview
 
-Intelligent Route Planner Using Graph Algorithms is a full-stack route optimization system that uses real-world OpenStreetMap road network data to calculate efficient travel routes between locations.
+Intelligent Route Planner Using Graph Algorithms is a full-stack route optimization platform that leverages real-world road network data from OpenStreetMap to calculate efficient travel routes between locations.
 
-The platform combines Graph Algorithms, Geospatial Processing, FastAPI, React, and OpenStreetMap to provide:
-
-- Shortest Path Calculation
-- Traffic-Aware ETA Estimation
-- Fuel Cost Prediction
-- Route Analytics
-- Interactive Route Visualization
-- Alternative Route Exploration
+The system integrates advanced graph algorithms, geospatial processing, traffic estimation, fuel cost prediction, and interactive route visualization to provide optimized navigation and route analytics.
 
 ---
 
@@ -55,48 +27,52 @@ The platform combines Graph Algorithms, Geospatial Processing, FastAPI, React, a
 
 ### 🗺 Route Planning
 
-- Real-world OpenStreetMap road network
-- Source and destination search
-- Interactive route visualization
-- Route optimization
+* Real-world OpenStreetMap road network
+* Source and destination search
+* Route optimization
+* Interactive route visualization
 
 ### ⚡ Graph Algorithms
 
-- Dijkstra's Algorithm
-- A* Search Algorithm
-- Breadth First Search (BFS)
-- Depth First Search (DFS)
-- Yen's K-Shortest Path Algorithm
+* Dijkstra's Algorithm
+* A* Search Algorithm
+* Breadth First Search (BFS)
+* Depth First Search (DFS)
+* Yen’s K-Shortest Path Algorithm
 
 ### 🚦 Traffic Analysis
 
-- Traffic ETA simulation
-- Route efficiency analysis
-- Alternative route exploration
+* Traffic-aware ETA prediction
+* Route congestion simulation
+* Alternative route exploration
+* Route efficiency analysis
 
 ### ⛽ Fuel Cost Estimation
 
-- Distance-based fuel calculation
-- Travel expense prediction
+* Distance-based fuel calculation
+* Travel expense prediction
+* Fuel cost estimation in INR
 
 ### 📊 Route Analytics
 
-- Total distance
-- Estimated travel time
-- Traffic-adjusted ETA
-- Average speed
-- Path node analysis
+* Total distance
+* Estimated travel time
+* Traffic-adjusted ETA
+* Fuel cost analysis
+* Path node statistics
 
 ### 📜 Search History
 
-- Recent route searches
-- Local storage persistence
+* Recent route searches
+* Local storage persistence
+* Quick route lookup
 
 ### 🌐 REST API
 
-- FastAPI backend
-- Swagger documentation
-- JSON responses
+* FastAPI backend
+* Swagger documentation
+* JSON responses
+* Health monitoring endpoint
 
 ---
 
@@ -106,13 +82,13 @@ The platform combines Graph Algorithms, Geospatial Processing, FastAPI, React, a
 
 ---
 
-## 📸 Screenshots
+## 📸 Project Screenshots
 
 ### Homepage
 
 ![Homepage](project-assets/screenshots/homepage.png)
 
-### Route Results
+### Route Result
 
 ![Route Result](project-assets/screenshots/route_result.png)
 
@@ -124,7 +100,7 @@ The platform combines Graph Algorithms, Geospatial Processing, FastAPI, React, a
 
 ![Route Map](project-assets/screenshots/route_map.png)
 
-### Swagger Documentation
+### Swagger API Documentation
 
 ![Swagger Docs](project-assets/screenshots/swagger_docs.png)
 
@@ -134,36 +110,36 @@ The platform combines Graph Algorithms, Geospatial Processing, FastAPI, React, a
 
 ### Frontend
 
-- React.js
-- Vite
-- Axios
-- Tailwind CSS
-- Leaflet
+* React.js
+* Vite
+* Tailwind CSS
+* Axios
+* Leaflet
 
 ### Backend
 
-- FastAPI
-- Uvicorn
+* FastAPI
+* Uvicorn
 
 ### Geospatial Processing
 
-- OpenStreetMap
-- OSMnx
-- NetworkX
-- Geopy
+* OpenStreetMap
+* OSMnx
+* NetworkX
+* Geopy
 
 ### Algorithms
 
-- Dijkstra Algorithm
-- A* Search
-- BFS
-- DFS
-- Yen's Algorithm
+* Dijkstra Algorithm
+* A* Search Algorithm
+* BFS
+* DFS
+* Yen’s Algorithm
 
 ### Languages
 
-- Python
-- JavaScript
+* Python
+* JavaScript
 
 ---
 
@@ -175,6 +151,7 @@ Intelligent-Route-Planner-Using-Graph-Algorithms
 ├── api/
 ├── frontend/
 ├── src/
+├── data/
 ├── outputs/
 │
 ├── images/
@@ -186,10 +163,9 @@ Intelligent-Route-Planner-Using-Graph-Algorithms
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
+├── render.yaml
 └── .gitignore
 ```
-
----
 
 ## 🚀 Installation
 
@@ -211,19 +187,19 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Run Backend:
+### Run Backend
 
 ```bash
 uvicorn api.app:app --reload
 ```
 
-Backend:
+Backend URL:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-Swagger:
+Swagger Documentation:
 
 ```text
 http://127.0.0.1:8000/docs
@@ -239,7 +215,7 @@ npm install
 npm run dev
 ```
 
-Frontend:
+Frontend URL:
 
 ```text
 http://localhost:5173
@@ -255,7 +231,7 @@ http://localhost:5173
 GET /route
 ```
 
-### Example
+### Example Request
 
 ```http
 GET /route?source=Meenakshi Amman Temple, Madurai&destination=Madurai Junction Railway Station
@@ -279,18 +255,33 @@ GET /route?source=Meenakshi Amman Temple, Madurai&destination=Madurai Junction R
 
 ## 🎯 Future Enhancements
 
-- Live Traffic API Integration
-- Multi-City Support
-- Voice Navigation
-- AI-Based Route Prediction
-- Route Sharing
-- Mobile Application
+* Live Traffic API Integration
+* Multi-City Support
+* Route Sharing
+* Voice Navigation
+* Mobile Application
+* AI-Based Route Prediction
+* User Authentication
+* Saved Routes
+
+---
+
+## 📚 Learning Outcomes
+
+* Graph Theory Fundamentals
+* Route Optimization Techniques
+* Geospatial Data Processing
+* OpenStreetMap Integration
+* FastAPI Backend Development
+* React Frontend Development
+* REST API Design
+* Full Stack Development
 
 ---
 
 ## 👩‍💻 Author
 
-### Vaishnava Devi
+**Vaishnava Devi**
 
 ---
 
