@@ -1,30 +1,52 @@
 import os
 import osmnx as ox
 
-CACHE_DIR = "data/osm_cache"
-CACHE_FILE = f"{CACHE_DIR}/madurai.graphml"
+GRAPH_FILE = "data/madurai_graph.graphml"
 
 
 def download_city_graph(city_name):
-    os.makedirs(CACHE_DIR, exist_ok=True)
 
-    if os.path.exists(CACHE_FILE):
+    if os.path.exists(GRAPH_FILE):
+
         print("Loading cached graph...")
-        graph = ox.load_graphml(CACHE_FILE)
+
+        graph = ox.load_graphml(
+            GRAPH_FILE
+        )
 
     else:
-        print(f"Downloading road network for {city_name}...")
+
+        print(
+            "Downloading graph..."
+        )
 
         graph = ox.graph_from_place(
             city_name,
             network_type="drive"
         )
 
-        ox.save_graphml(graph, CACHE_FILE)
+        os.makedirs(
+            "data",
+            exist_ok=True
+        )
 
-        print("Graph cached successfully!")
+        ox.save_graphml(
+            graph,
+            GRAPH_FILE
+        )
 
-    print(f"Nodes: {graph.number_of_nodes()}")
-    print(f"Edges: {graph.number_of_edges()}")
+    print(
+        f"Nodes: {len(graph.nodes)}"
+    )
+
+    print(
+        f"Edges: {len(graph.edges)}"
+    )
 
     return graph
+
+if __name__ == "__main__":
+
+    download_city_graph(
+        "Madurai, Tamil Nadu, India"
+    )

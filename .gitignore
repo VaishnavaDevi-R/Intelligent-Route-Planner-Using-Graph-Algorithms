@@ -73,7 +73,6 @@ outputs/reports/
 # =========================
 
 data/cache/
-*.graphml
 
 # =========================
 # Testing
